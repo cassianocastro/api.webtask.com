@@ -9,7 +9,7 @@ use App\model\repository\ContractsRepository;
 /**
  *
  */
-final class ContractsController
+final class ContractsServices
 {
 
     public function addContract(): void

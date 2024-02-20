@@ -10,7 +10,7 @@ use App\view\View;
 /**
  *
  */
-final class AddressesController
+final class AddressesServices
 {
 
     public function addAddress(): void

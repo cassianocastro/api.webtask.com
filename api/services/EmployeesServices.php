@@ -9,7 +9,7 @@ use App\model\repository\EmployeeRepository;
 /**
  *
  */
-final class EmployeesController
+final class EmployeesServices
 {
 
     public function addEmployee(): void
