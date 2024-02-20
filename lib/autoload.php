@@ -6,6 +6,6 @@ spl_autoload_register(
     {
         $file = str_replace("\\", DIRECTORY_SEPARATOR, $className);
 
-        require_once "$file.php";
+        require_once __DIR__ . "/../$file.php";
     }
 );
