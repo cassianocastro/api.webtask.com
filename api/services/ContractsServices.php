@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\controller;
+namespace api\services;
 
 use App\model\{ DBConfig, ConnectionFactory };
 use App\model\repository\ContractsRepository;
