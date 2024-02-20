@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\model\repository;
+namespace api\models\repository;
 
 use PDO;
 use App\model\entities\Employee;
