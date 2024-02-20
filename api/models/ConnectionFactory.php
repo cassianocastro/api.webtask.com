@@ -18,7 +18,10 @@ final class ConnectionFactory
             return new PDO(
                 $config->getDSN(),
                 $config->getUsername(),
-                $config->getPassword()
+                $config->getPassword(),
+                [
+                    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                ]
             );
         }
         catch ( PDOException $e )
