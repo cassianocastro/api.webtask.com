@@ -5,7 +5,6 @@ namespace api\services;
 
 use App\model\{ DBConfig, ConnectionFactory };
 use App\model\repository\AddressRepository;
-use App\view\View;
 
 /**
  *
