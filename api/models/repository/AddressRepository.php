@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace api\models\repository;
 
 use PDO;
-use App\model\entities\Address;
+use api\models\entities\Address;
 
 /**
  *

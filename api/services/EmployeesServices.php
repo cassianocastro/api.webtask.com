@@ -3,8 +3,8 @@ declare(strict_types=1);
 
 namespace api\services;
 
-use App\model\{ DBConfig, ConnectionFactory };
-use App\model\repository\EmployeeRepository;
+use api\models\{ DBConfig, ConnectionFactory };
+use api\models\repository\EmployeeRepository;
 
 /**
  *
