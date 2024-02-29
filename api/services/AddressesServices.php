@@ -20,7 +20,7 @@ final class AddressesServices
         $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
-        (new AddressRepository($connection))->insertAddressFromEmployee($address, $employeeID);
+        // (new AddressRepository($connection))->insertAddressFromEmployee($address, $employeeID);
     }
 
     public function updateAddress(): void
@@ -31,7 +31,7 @@ final class AddressesServices
         $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
-        (new AddressRepository($connection))->updateAddressFromEmployee($address, $employeeID);
+        // (new AddressRepository($connection))->updateAddressFromEmployee($address, $employeeID);
 
         // echo ( $updated ) ? "Updated register." : "Couldn't update!";
     }
@@ -46,7 +46,7 @@ final class AddressesServices
         $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
-        $addresses  = (new AddressRepository($connection))->getAddressesFromEmployee();
+        // $addresses  = (new AddressRepository($connection))->getAddressesFromEmployee();
 
         // (new View())->render();
     }
