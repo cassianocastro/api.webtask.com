@@ -26,13 +26,13 @@ final class ContractsRepository
                 INSERT INTO
                     contract -- (registration, admission, wage, office)
                 VALUES
-                    (?, ?, ?, ?)
+                    (NULL, ?, ?, ?, ?)
             SQL
         );
-        $statement->bindParam(1, $contract->getRegistration());
-        $statement->bindParam(2, $contract->getAdmission());
-        $statement->bindParam(3, $contract->getWage());
-        $statement->bindParam(4, $contract->getOffice());
+        $statement->bindValue(1, $contract->getRegistration());
+        $statement->bindValue(2, $contract->getAdmission());
+        $statement->bindValue(3, $contract->getWage());
+        $statement->bindValue(4, $contract->getOffice());
 
         $statement->execute();
     }
