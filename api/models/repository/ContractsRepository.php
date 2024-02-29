@@ -37,9 +37,9 @@ final class ContractsRepository
         $statement->execute();
     }
 
-    public function getContractFromEmployee(): iterable
+    public function getContractFromEmployee(int $cpf): iterable
     {
-        $statement = $this->connection->query(
+        $statement = $this->connection->prepare(
             <<<SQL
                 SELECT
                     ID, registration, admission, wage, office
@@ -49,6 +49,8 @@ final class ContractsRepository
                     ID = (SELECT contract FROM employee WHERE CPF = ?)
             SQL
         );
+        $statement->bindValue(1, $cpf, PDO::PARAM_INT);
+        $statement->execute();
 
         return $statement->fetch();
     }
