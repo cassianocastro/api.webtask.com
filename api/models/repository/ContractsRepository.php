@@ -45,9 +45,11 @@ final class ContractsRepository
                     ID, registration, admission, wage, office
                 FROM
                     contract
+                WHERE
+                    ID = (SELECT contract FROM employee WHERE CPF = ?)
             SQL
         );
 
-        return $statement->fetchAll();
+        return $statement->fetch();
     }
 }
