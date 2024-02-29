@@ -36,6 +36,11 @@ final class AddressesServices
         // echo ( $updated ) ? "Updated register." : "Couldn't update!";
     }
 
+    public function deleteAddress(): void
+    {
+        echo __METHOD__;
+    }
+
     public function showAddresses(): void
     {
         $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
