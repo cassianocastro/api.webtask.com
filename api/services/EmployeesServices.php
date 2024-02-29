@@ -17,7 +17,7 @@ final class EmployeesServices
         $employee = $_POST[""];
         $contract = $_POST[""];
 
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         (new EmployeeRepository($connection))->insert($employee, $contract);

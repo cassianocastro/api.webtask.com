@@ -17,7 +17,7 @@ final class AddressesServices
         $address    = $_POST[""];
         $employeeID = $_POST[""];
 
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         // (new AddressRepository($connection))->insertAddressFromEmployee($address, $employeeID);
@@ -28,7 +28,7 @@ final class AddressesServices
         $address    = $_POST[""];
         $employeeID = $_POST[""];
 
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         // (new AddressRepository($connection))->updateAddressFromEmployee($address, $employeeID);
@@ -43,7 +43,7 @@ final class AddressesServices
 
     public function showAddresses(): void
     {
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         // $addresses  = (new AddressRepository($connection))->getAddressesFromEmployee();

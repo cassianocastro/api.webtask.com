@@ -16,7 +16,7 @@ final class ContractsServices
     {
         $contract   = $_POST[""];
 
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         (new ContractsRepository($connection))->insert($contract);
@@ -24,7 +24,7 @@ final class ContractsServices
 
     public function updateContract(): void
     {
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         // (new ContractsRepository($connection))->updateContract($contract);
@@ -32,7 +32,7 @@ final class ContractsServices
 
     public function deleteContract(): void
     {
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         // (new ContractsRepository($connection))->deleteContract($contract);
@@ -40,7 +40,7 @@ final class ContractsServices
 
     public function showContract(): void
     {
-        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $config     = new DBConfig("localhost", "mysql", "webtask", "php", "php", 3306);
         $connection = (new ConnectionFactory())->create($config);
 
         // (new ContractsRepository($connection))->get();
