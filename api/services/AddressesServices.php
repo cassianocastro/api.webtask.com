@@ -45,4 +45,9 @@ final class AddressesServices
 
         // (new View())->render();
     }
+
+    public function showAddress(): void
+    {
+        echo __METHOD__;
+    }
 }
