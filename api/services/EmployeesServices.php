@@ -44,4 +44,9 @@ final class EmployeesServices
 
         print json_encode($employees, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
     }
+
+    public function showEmployee(): void
+    {
+        echo __METHOD__;
+    }
 }
