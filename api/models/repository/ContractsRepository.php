@@ -37,7 +37,7 @@ final class ContractsRepository
         $statement->execute();
     }
 
-    public function getAll(): iterable
+    public function getContractFromEmployee(): iterable
     {
         $statement = $this->connection->query(
             <<<SQL
