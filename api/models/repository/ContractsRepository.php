@@ -37,6 +37,27 @@ final class ContractsRepository
         $statement->execute();
     }
 
+    public function update(Contract $contract, int $cpf): void
+    {
+        $statement = $this->connection->prepare(
+            <<<SQL
+                UPDATE
+                    contract
+                SET
+                    registration = ?, admission = ?, wage = ?, office = ?
+                WHERE
+                    ID = (SELECT contract FROM employee WHERE CPF = ?)
+            SQL
+        );
+        $statement->bindValue(1, $contract->getRegistration());
+        $statement->bindValue(2, $contract->getAdmission());
+        $statement->bindValue(3, $contract->getWage());
+        $statement->bindValue(4, $contract->getOffice());
+        $statement->bindValue(5, $cpf);
+
+        $statement->execute();
+    }
+
     public function getContractFromEmployee(int $cpf): iterable
     {
         $statement = $this->connection->prepare(
