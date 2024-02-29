@@ -21,4 +21,28 @@ final class ContractsServices
 
         (new ContractsRepository($connection))->insert($contract);
     }
+
+    public function updateContract(): void
+    {
+        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new ConnectionFactory())->create($config);
+
+        // (new ContractsRepository($connection))->updateContract($contract);
+    }
+
+    public function deleteContract(): void
+    {
+        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new ConnectionFactory())->create($config);
+
+        // (new ContractsRepository($connection))->deleteContract($contract);
+    }
+
+    public function showContract(): void
+    {
+        $config     = new DBConfig("localhost", "mysql", "webTask", "php", "php", 3306);
+        $connection = (new ConnectionFactory())->create($config);
+
+        // (new ContractsRepository($connection))->get();
+    }
 }
