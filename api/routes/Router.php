@@ -18,13 +18,19 @@ final class Router
             "/^\/employees\/(\d+)\/address$/" => "AddressesServices.showAddress"
         ],
         "POST"   => [
-
+            "/^\/employees$/" => "EmployeesServices.addEmployee",
+            "/^\/employees\/(\d+)\/contract$/" => "ContractsServices.addContract",
+            "/^\/employees\/(\d+)\/address$/" => "AddressesServices.addAddress"
         ],
         "PUT"    => [
-
+            "/^\/employees\/(\d+)$/" => "EmployeesServices.updateEmployee",
+            "/^\/employees\/(\d+)\/contract$/" => "ContractsServices.updateContract",
+            "/^\/employees\/(\d+)\/address$/" => "AddressesServices.updateAddress"
         ],
         "DELETE" => [
-
+            "/^\/employees\/(\d+)$/" => "EmployeesServices.deleteEmployee",
+            "/^\/employees\/(\d+)\/contract$/" => "ContractsServices.deleteContract",
+            "/^\/employees\/(\d+)\/address$/" => "AddressesServices.deleteAddress"
         ]
     ];
 
