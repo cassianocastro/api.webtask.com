@@ -40,7 +40,7 @@ final class EmployeesServices
 
         $employees  = (new EmployeeRepository($connection))->getAll();
 
-        header("Content-Type: application/json; charset=UTF-8");
+        header("Content-Type: application/json; charset=UTF-8", false, 200);
 
         print json_encode($employees, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
     }
