@@ -26,11 +26,11 @@ final class ContractsServices
                 new Contract(0, $array["register"], $array["office"], $array["admission"], $array["wage"])
             );
 
-            echo 200;
+            http_response_code(201);
         }
         catch ( \Exception $e )
         {
-            echo 500;
+            http_response_code(500);
         }
     }
 
@@ -48,11 +48,11 @@ final class ContractsServices
         {
             (new ContractsRepository($connection))->update($contract, $cpf);
 
-            echo 200;
+            http_response_code(201);
         }
         catch ( \Exception $e )
         {
-            echo 500;
+            http_response_code(500);
         }
     }
 
@@ -62,6 +62,8 @@ final class ContractsServices
         $connection = (new ConnectionFactory())->create($config);
 
         // (new ContractsRepository($connection))->deleteContract($contract);
+
+        http_response_code(204);
     }
 
     public function showContract(): void
@@ -81,7 +83,7 @@ final class ContractsServices
         }
         catch ( \Exception $e )
         {
-            echo $e->getMessage() . PHP_EOL, 500;
+            http_response_code(500);
         }
     }
 }
