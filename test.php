@@ -9,10 +9,10 @@ function canPostEmployeeContract(): void
 {
     $json = json_encode(
         [
-            "register"  => "007",
-            "office"    => "Mecanico",
-            "admission" => "2023-01-10",
-            "wage"      => 2400.30
+            "register"  => "011",
+            "office"    => "Assistente DP",
+            "admission" => "2014-03-19",
+            "wage"      => 2700.30
         ],
         JSON_PRESERVE_ZERO_FRACTION
     );
@@ -28,7 +28,7 @@ function canPostEmployeeContract(): void
     ];
 
     $context = stream_context_create($options);
-    $content = file_get_contents(API_URL . "/employees/2/contract", false, $context);
+    $content = file_get_contents(API_URL . "/employees/contract", false, $context);
 
     print $content;
 }
