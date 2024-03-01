@@ -19,7 +19,7 @@ final class Router
         ],
         "POST"   => [
             "/^\/employees$/" => "EmployeesServices.addEmployee",
-            "/^\/employees\/(\d+)\/contract$/" => "ContractsServices.addContract",
+            "/^\/employees\/contract$/" => "ContractsServices.addContract",
             "/^\/employees\/(\d+)\/address$/" => "AddressesServices.addAddress"
         ],
         "PUT"    => [
